@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 5;
+        var b = 6;
+
+        addition(a,b); // function calling
+
+        var d = 7;
+        var e = 8;
+
+        addition(d,e); //function calling
+
+        var f= 9;
+        var g = 10;
+        
+        addition(f,g); //function calling
+
+        //function definition
+        function addition(value1, value2){
+            console.log("Multiplication", value1*value2);
+            console.log("Addition", value1+value2);
+            console.log("Division", value1/value2);
+            console.log("square value", value1**2);
+        }
+
+        //value1 and value2 are called arguments or parameters.
+
+    
+        var a = "Krishna";
+
+        function sayHello(name){
+            console.log("Hello", name);
+        }
+
+        sayHello(a);
+       
+
+        function Multiplication(a,b){
+            console.log(a*b);
+        }
+
+        Multiplication(5,6);
+
+
+        // this function is returning some value
+        function square(a){
+            return a**2;
+        }
+
+
+        var res = square(3);
+        console.log(res); 
+
+    </script>
+</body>
+</html>

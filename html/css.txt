@@ -1,0 +1,18 @@
+CSS - Cascading Style sheets
+
+Why we need to use CSS?
+
+HTML will give us Structure only. To apply various like fontsize, color, positions we need to CSS.
+
+html code -> .html
+
+css code: 
+        1. HTML FILE
+            a) Inline css.
+            b) CSS in Header using <style> property. (Internal)
+        2. CSS File (.css) - External file
+
+
+Without CSS 
+
+CSS Syntax:

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>This is paragraph</p>
+
+    <p>This is second paragraph</p>
+
+    <span>This is span</span>
+
+    <div>This is div</div>
+
+    <script>
+        const p = document.getElementsByTagName("P")
+        console.log(p[0].innerHTML);
+        console.log(p[1].innerHTML);
+
+
+        const span = document.getElementsByTagName("SPAN");
+        console.log(span[0].innerHTML);
+
+        const div = document.getElementsByTagName("DIV")
+        console.log(div[0].innerHTML);
+    </script>
+</body>
+</html>
