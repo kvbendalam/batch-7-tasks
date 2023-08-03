@@ -6,14 +6,56 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="username" onload="getUser()" />
+    <label>Username: </label>
+    <input type="text" id="username" onblur="getUser()" />
+
+
+    <select onchange="getCar()" id="car">
+        <option>BMW</option>
+        <option>VW</option>
+        <option>Benz</option>
+    </select>
+
+    <input type="password" id="password" onfocus="backgroundColorChange()"/>
+
+    <input id="p" onselect="selecto()" value="somevalue"></input>
+
+    <br/><br/>
+    <form onsubmit="getDetails()">
+        <label>Username:</label>
+        <input type="text" id="email"/>
+        <label>Password:</label>
+        <input type="password" id="pwd"/>
+        <input type="submit" value="submit"/>
+    </form>
 
     <script>
-          
-            function getUser(){
-                var username = document.getElementById("username");
-                document.write(username.value);
-            }
+        function getUser(){
+            var username = document.getElementById("username")
+            console.log(username.value);
+        }
+
+        function getCar(){
+            var car = document.getElementById("car")
+            console.log(car.value)
+        }
+
+        function backgroundColorChange(){
+            var password = document.getElementById("password")
+            password.style.backgroundColor = "red"
+        }
+
+        function selecto(){
+            var p = document.getElementById("p")
+            alert(p.value)
+        }
+
+        function getDetails(){
+            var email = document.getElementById("email")
+            var pwd = document.getElementById("pwd")
+            document.write("Email : ", email.value)
+            document.write("Password: ", pwd.value)
+        }
     </script>
 </body>
 </html>
