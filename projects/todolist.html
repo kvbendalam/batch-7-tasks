@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        .container {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #inputBtn {
+            width: 60%;
+            height: 50px;
+            border: 1px solid black;
+            background-color: grey;
+        }
+
+        #searchBtn {
+            width: 20%;
+            height: 50px;
+            margin: 10px;
+            color: black;
+            font-size: 24px;
+            font-weight: 600;
+            background-color: white;
+        }
+
+        ul > li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 30px;
+            list-style-type: none;
+            background-color: olive;
+            color: black;
+            border: 1px solid black;
+            margin: auto auto;
+            padding: 5px;
+        }
+
+        .deleteBtn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <input type="text" id="inputBtn" value=""/>
+        <br/>
+        <input type="button" value="Add New Item" id="searchBtn" onclick="addNewTodoList()"/>
+        <ul id="result"></ul>
+    </div>
+
+    <script>
+        function addNewTodoList() {
+            var inputBtn = document.getElementById("inputBtn");
+            var ul = document.getElementById("result");
+            var li = document.createElement("li");
+            var deleteBtn = document.createElement("button");
+            var completBtn = document.createElement("button");
+            var textSpan = document.createElement("span"); // Create a new <span> element
+            
+            textSpan.textContent = inputBtn.value; // Set the text content of the <span>
+            li.appendChild(textSpan); // Append the <span> to the list item
+            
+            deleteBtn.textContent = "Delete";
+            completBtn.textContent = "Done";
+            deleteBtn.classList.add("deleteBtn");
+            
+            deleteBtn.onclick = function() {
+                ul.removeChild(li);
+            };
+
+            completBtn.onclick = function(){
+                textSpan.style.textDecoration = "line-through"; // Apply line-through to the <span>
+            }
+            
+            li.appendChild(deleteBtn);
+            li.appendChild(completBtn);
+            ul.appendChild(li);
+            
+            inputBtn.value = ""; // Clear the input field after adding
+        }
+    </script>
+</body>
+</html>

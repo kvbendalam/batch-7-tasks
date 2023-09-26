@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name, age, mobile){
+                this.name = name;
+                this.age = age;
+                this.mobile = mobile;
+            }
+            walk(){
+                console.log(this.name, " is Walking")
+            }
+        }
+
+        var yaseen = new Person("Yassen", 23, 8181919191);
+        yaseen.walk()
+        var sesharao = new Person("Sesharao", 30, 292929292);
+        sesharao.walk()
+        var babu = new Person("Babu", 28, 2929292929)
+        babu.walk()
+
+        console.log(yaseen);
+        console.log(sesharao);
+        console.log(babu);
+    </script>
+</body>
+</html>

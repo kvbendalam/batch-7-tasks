@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            walk(){
+                console.log(this.name + " is Walking")
+            }
+
+            run(){
+                console.log(this.name + " is Running")
+            }
+        }
+
+        class student extends person{
+            constructor(name, age, studentRollNo, collegeName){
+                super(name, age)
+                this.studentRollNo = studentRollNo;
+                this.collegeName = collegeName;
+            }
+
+            rollnumberAndCollegeName(){
+                console.log(this.studentRollNo, this.collegeName)
+            }
+        }
+
+
+        var student1 = new student("Krishna", 28, 1001919, "Some college")
+        console.log(student1)
+        student1.walk();
+        student1.run();
+        student1.rollnumberAndCollegeName();
+
+
+        class employee extends person{
+            constructor(name, age, designation){
+                super(name, age);
+                this.designation = designation;
+            }
+
+            profession(){
+                console.log(this.designation)
+            }
+        }
+
+        var emp = new employee("Vamsi", 28, "Software Engineer")
+        console.log(emp);
+        emp.profession();
+        emp.walk();
+        emp.run();
+
+    </script>
+</body>
+</html>
