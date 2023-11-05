@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ApiCallInClass from './ApiCallInClass';
 import ApiCallinFunctinon from './ApiCallinFunctinon';
 import TableInData from './TableInData';
+import User from './User'
+import AxiosAPICall from './AxiosAPICall';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path='/' element={<ComponentA />} />
+          <Route exact path='/axios' element={<AxiosAPICall />} />
+          <Route exact path='/user' element={<User />} />
           <Route exact path='/course/:id' element={< Course />} />
           <Route exact path='/login' element={< Login />} />
           <Route exact path='/counter' element={< Counter />} />
