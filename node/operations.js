@@ -61,8 +61,10 @@ async function main() {
     // const updatedEmp = await updateEmployee(4, "Vizag")
     // console.log(updatedEmp)
 
-    const del = await deleteEmp(5);
-    console.log(del)
+    // const del = await deleteEmp(5);
+    // console.log(del)
 }
 
 main()
+
+module.exports = { readEmployees, readEmployeeById, insertEmployee, updateEmployee, deleteEmp }
